@@ -1,0 +1,475 @@
+
+
+.body {
+  background: rgba(37, 37, 37, 0.993);
+
+}
+.encabezado{
+  padding: 0.5rem 2rem 0 8rem;
+}
+
+.navbar .nav-link {
+  color: rgb(255, 255, 255); /* Color más claro para enlaces deshabilitados */
+}
+
+.nombre{
+  color: white;
+  
+}
+span{
+  color: blueviolet;
+}
+.logo{
+  display: flex;
+  text-align: center;
+}
+.container {
+  position: relative;
+  height: 570px;
+  display: flex;
+  align-items: center;
+}
+
+.left-section, .right-section {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  justify-content: center;
+}
+
+.izq{
+  color: white;
+
+}
+
+.contenedor-botones {
+  display: flex;
+  justify-content: space-between; /* Distribuye los botones */
+  align-items: center;
+  margin-right: 10em;
+  padding-left: 10px;
+  
+}
+
+
+/*LETRAS EN MOVIMIENTO*/
+.movimiento {
+  border-right: 2px solid;/*Esto es para que salga el cursor, besicamente crea un borde*/
+  overflow: hidden;
+  animation: caret 0.75s step-end infinite;
+}
+
+@keyframes caret {
+  50% {
+      border-color: transparent;/*aquí el cursor o el borde se torna transparente para que parpadee*/
+  }
+}
+/*FIN DE LETRAS EN MOVIMIENTO*/
+
+/*BOTON DOWLOAND CV*/
+.container-boton-cv {
+  position: relative;
+  display: inline-block; /* Asegúrate de que el contenedor se ajuste al botón */
+  display: flex;
+}
+
+.container-boton-cv::before {
+  content: "";
+  position: absolute;
+  inset: 0; /*es una forma abreviada de definir los valores de top, right, bottom y left en un solo valor*/
+  border-radius: 1em;
+  background: linear-gradient(90deg, #9403f4, #f441d6);
+  filter: blur(0.1em);/*le agrega un desenfoque estatico antes del hover(de pasar el mouse)*/
+  transition: filter 0.8s ease;
+}
+
+.container-boton-cv:hover::before {
+  filter: blur(1em); /* Cambiar el desenfoque en hover */
+  transform: scale(1); /* Aumenta el tamaño al 120% */
+}
+
+.button {
+  height: 2.5em;
+  width: 12em;
+  font-size: 1em;
+  padding: 0.1em 0.5em;
+  border-radius: 1em;
+  border: none;
+  background-color: blueviolet;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 1; /* Asegúrate de que el botón esté encima del fondo */
+  justify-content: flex-end;
+  transition: 1s ease;
+}
+
+.button:hover{
+  transform: scale(1.2); /* Aumenta el tamaño al 120% */
+
+}
+
+/*FIN BOTON DOWLOAND*/
+
+
+
+/*IMAGEN */
+.right-section {
+  width: 60%;
+  height: 80%;
+  
+  
+}
+
+.contenedor-imagen {
+  height: 100%;
+  width: 90%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-imagen::before {
+  content: "";
+  position: absolute; /* Se coloca detrás de la imagen */
+  inset: 0; /* Cubre todo el contenedor */
+  border-radius: 100%; /* Hace que el fondo sea redondo */
+  background: blueviolet;
+  filter: blur(0.3em); 
+  transition: filter 0.8s ease;
+  
+}
+
+.contenedor-imagen:hover::before {
+  filter: blur(0.1em); /* Cambiar el desenfoque en hover */
+}
+
+.img {
+  width: 90%;
+  height: 90%;
+  border-radius: 100%;
+  border: 3px solid blueviolet;
+  background: rgba(37, 37, 37, 0.993);
+
+    z-index: 1; 
+
+}
+/*FIN DE IMAGEN*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* ICONOS DE REDES SOCIALES */ 
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2em;
+}
+
+.card1 {
+  width: 40px;
+  height: 40px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 90px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.instagram {
+  margin-top: 0.5em;
+  margin-left: 0.2em;
+  fill: #cc39a4;
+  background: none;
+}
+
+.card2 {
+  width: 40px;
+  height: 40px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 90px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.twitter {
+  margin-top: 0.5em;
+  margin-left: -0.5em;
+  fill: #03A9F4;
+  background: none;
+}
+
+.card3 {
+  width: 40px;
+  height: 40px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.github {
+  margin-top: -0.7em;
+  margin-left: 0.3em;
+  background: none;
+}
+
+.card4 {
+  width: 40px;
+  height: 40px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.discord {
+  margin-top: -.7em;
+  margin-left: -.7em;
+  fill: #8c9eff;
+  background: none;
+}
+
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background: rgba(37, 37, 37, 0.993);
+}
+
+.card1:hover .instagram {
+  fill: white;
+}
+
+.card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background: rgba(37, 37, 37, 0.993);
+}
+
+.card2:hover .twitter {
+  fill: white;
+}
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background: rgba(37, 37, 37, 0.993);
+}
+
+.card3:hover .github {
+  fill: white;
+}
+
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background: rgba(37, 37, 37, 0.993);
+}
+
+.card4:hover .discord {
+  fill: white;
+}
+/*FIN DE REDES SOCIALES*/
+
+/*PORTAFOLIO*/
+
+.portafolio{
+  display: flex;
+  flex-direction: column;/*para que se comporte como columna*/
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 255, 191, 0.705);
+  height: 650px;
+}
+
+.imagen-carrusel{
+  height: 30em;
+  transition: opacity 1s ease-in-out; /* Transición suave */
+  position: absolute;
+}
+.carousel-inner{
+  height: 30em;
+}
+
+.carousel{
+
+ margin-top: 2%;
+  height: 80%;
+  width: 80%;
+  overflow: hidden;
+  border-radius: 10%;
+}
+
+.titulo-portafolio{
+  background:none;
+  color: black;
+}
+
+.carousel-caption{
+  background: #0302033a;
+}
+
+/*FIN PORTAFOLIO*/
+
+
+/*FOOTER*/
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.socials {
+  list-style: none;
+  padding: 0;
+}
+
+.socials li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.socials a {
+  color: white;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/*sobre mi*/
+.sobreMi {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  height: 660px;
+}
+
+.aside-izquierdo, .aside-derecho {
+  flex: 0 0 25%; /* Hacer los aside más estrechos */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-align: justify; /* Justificar el texto */
+  background-color: #cabbce;
+
+
+
+
+}
+
+.foto-texto {
+  flex: 1; /* Mantener el centro más ancho */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: justify; /* Justificar el texto */
+  background-color: #8c7e91;
+
+
+}
+
+.foto-texto img {
+  max-width: 80%; /* Ajusta el tamaño de la imagen */
+  border-radius: 8px;
+  margin-bottom: 15px;
+  height: 60%;
+  
+}
+
+.aside-izquierdo h2 p{
+color: black;
+}
+.aside-derecho ul li{
+  color: black;
+}
+
+/*FORMULARIO*/
+.contactanos {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  height: 600px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*contactanos*/
+
+
+
